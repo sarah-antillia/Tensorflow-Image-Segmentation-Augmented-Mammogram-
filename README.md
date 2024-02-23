@@ -104,8 +104,8 @@ by using <a href="./projects/TensorflowSlightlyFlexibleUNet/Augmented-Mammogram/
 <pre>
 ; train_eval_infer.config
 ; Pancreas, GENERATOR_MODE=True
-; 2024/02/21 (C) antillia.com
-; 2024/02/22 Modified to use 
+; 2024/02/23 (C) antillia.com
+; 2024/02/23 Modified to use 
 ; loss           = "bce_dice_loss"
 
 [model]
@@ -163,7 +163,7 @@ blursize      = None
 
 [mask]
 blur      = True
-blur_size = (5,5)
+blur_size = (3,3)
 binarize  = True
 #threshold = 128
 threshold = 74
@@ -173,9 +173,8 @@ debug     = True
 augmentation   = True
 
 [augmentor]
-;2024/02/21 vflip=False
 vflip    = False
-hflip    = True
+hflip    = False
 rotation = True
 angles   = [5, 10,]
 shrinks  = [0.8]
@@ -183,7 +182,6 @@ shears   = [0.2]
 transformer = True
 alpah       = 1300
 sigmoid     = 8
-
 </pre>
 
 Please note that the online augementor 
@@ -193,7 +191,7 @@ ImageMaskAugmentor.py</a> reads the parameters in [generator] and [augmentor] se
 <pre>
 [augmentor]
 vflip    = False
-hflip    = True
+hflip    = False
 rotation = True
 angles   = [5, 10,]
 shrinks  = [0.8]
@@ -202,7 +200,7 @@ transformer = True
 alpah       = 1300
 sigmoid     = 8
 </pre>
-Depending on these parameters in [augmentor] section, it will generate hflipped, rotated, shrinked,
+Depending on these parameters in [augmentor] section, it will generate rotated, shrinked,
 sheared, elastic-transformed images and masks
 from the original images and masks in the folders specified by image_datapath and mask_datapath in 
 [train] and [eval] sections.<br>
