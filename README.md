@@ -5,7 +5,8 @@ the <a href="https://github.com/sarah-antillia/Tensorflow-Image-Segmentation-API
 <a href="https://drive.google.com/file/d/1aqvLkuhGUHdw7eaF9PzxbtoduvAJ90HY/view?usp=sharing">
 Mammogram-ImageMask-Dataset.zip</a>
 <br>
-<img src="./projects/TensorflowSlightlyFlexibleUNet/Augmented-Mammogram/asset/train_samples.png" width="720" height="auto">
+<br>
+<img src="./projects/TensorflowSlightlyFlexibleUNet/Augmented-Mammogram/asset/segmentation_samples.png" width="720" height="auto">
 <br>
 <br>
 
