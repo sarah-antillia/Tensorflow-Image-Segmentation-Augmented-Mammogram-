@@ -3,11 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# 2024/02/21
-dataset/Mammogram/train/
-dataset/Mammogram/valid/
+# 2024/10/22
+dataset/
 projects/*/*/models/
-
+projects/*/*/epoch_change_infer/
 projects/*/*/generated_images_dir/
 projects/*/*/generated_masks_dir/
 
